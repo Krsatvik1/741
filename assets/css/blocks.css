@@ -290,8 +290,6 @@ section .content.bg-black .pagination-custom-1 .cbp-nav-pagination-item::after
 
 .block-about-1 .container-video a span
 {
-    font-size: 30px;
-    line-height: 80px;
 
     position: absolute;
     z-index: 10;
@@ -300,8 +298,8 @@ section .content.bg-black .pagination-custom-1 .cbp-nav-pagination-item::after
 
     overflow: hidden;
 
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: max-content;
 
     -webkit-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
@@ -387,7 +385,7 @@ section .content.bg-black .pagination-custom-1 .cbp-nav-pagination-item::after
 .block-about-1.bg-white .container-video a span
 {
     color: #fff !important;
-    background: #af997f;
+    background: #00000000;
 }
 
 .block-about-1.bg-white .container-video:hover a
@@ -398,7 +396,7 @@ section .content.bg-black .pagination-custom-1 .cbp-nav-pagination-item::after
 .block-about-1.bg-white .container-video a span:after
 {
     color: #fff;
-    background: #121212;
+    background: #00000000;
 }
 
 

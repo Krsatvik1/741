@@ -57,7 +57,7 @@ h4,
 h5,
 h6
 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-weight: normal;
     line-height: 1em;
 
@@ -101,7 +101,7 @@ h6
 
 p
 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 18px;
     line-height: 1.7em;
 }
@@ -110,7 +110,7 @@ a,
 a:hover,
 a:focus
 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 18px;
 
     cursor: pointer;
@@ -124,7 +124,7 @@ a:focus
 
 span
 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 16px;
 
     letter-spacing: .02em;
@@ -132,7 +132,7 @@ span
 
 blockquote.blockquote-default
 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 17.5px;
     font-style: italic;
 
@@ -168,7 +168,7 @@ blockquote.blockquote-default footer:before
 ol.list-default,
 ul.list-default
 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 18px;
 
     margin-left: 20px;
@@ -1497,7 +1497,7 @@ ul.tab-navigation-default a
 
 .progess-bar-default .progress-bar span
 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 10px;
     font-weight: 500;
     line-height: 10px;
@@ -1579,7 +1579,7 @@ ul.tab-navigation-default a
 
 a.button-default
 {
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 60px;
