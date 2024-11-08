@@ -1,128 +1,66 @@
 <?php
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/includes/config/Config.php';
+require_once __DIR__ . '/includes/email/Mailer.php';
+require_once __DIR__ . '/includes/email/EmailTemplates.php';
 
-/** 1. MAIN SETTINGS
-*******************************************************************/
+header('Content-Type: application/json');
 
-
-// ENTER YOUR EMAIL
-$emailTo = "krsatvik@gmail.com";
-
-// ENTER IDENTIFIER
-$emailIdentifier =  "Message sent via contact form from " . $_SERVER["SERVER_NAME"];
-
-
-/** 2. MESSAGES
-*******************************************************************/
-
-
-// SUCCESS MESSAGE
-$successMessage = "* Email Sent Successfully!";
-
-
-/** 3. MAIN SCRIPT
-*******************************************************************/
-
-
-if($_POST) {
+try {
+    $config = Config::getInstance();
     
-    $block_success = false;
+    // Get POST data
+    $name = $_POST['name'] ?? '';
+    $email = $_POST['email'] ?? '';
+    $phoneNo = $_POST['phone'] ?? '';
+    $message = $_POST['message'] ?? '';
+    $recaptchaResponse = $_POST['token'] ?? '';
 
-    $name = addslashes(trim($_POST['name']));
-    
-    $clientEmail = addslashes(trim($_POST['email']));
-        
-    $phone = addslashes(trim($_POST['phone']));
-    $phone_required = addslashes(trim($_POST['phone_required']));
-    
-    $address = addslashes(trim($_POST['address']));
-    $address_required = addslashes(trim($_POST['address_required']));
-    
-    $company = addslashes(trim($_POST['company']));
-    $company_required = addslashes(trim($_POST['company_required']));
-    
-    $subject = addslashes(trim($_POST['subject']));
-    $subject_required = addslashes(trim($_POST['subject_required']));
-    
-    $message = addslashes(trim($_POST['message']));
-    
-    $antiSpamHPC = addslashes(trim($_POST['country']));
-    
-    
-    $array = array('nameMessage' => '', 'emailMessage' => '', 'subjectMessage' => '', 'companyMessage' => '', 'addressMessage' => '', 'phoneMessage' => '', 'messageMessage' => '', 'succesMessage' => '');
-
-    if( $name === '' ) {
-        $array['nameMessage'] = 'error';
-        $block_success = true;
+    // Validate inputs
+    if (empty($name) || empty($email) || empty($phoneNo) || empty($message)) {
+        throw new Exception('Please fill in all required fields');
     }
 
-    if( !filter_var( $clientEmail, FILTER_VALIDATE_EMAIL ) ) {
-        $array['emailMessage'] = 'error';
-        $block_success = true;
-    }
-    
-    if( $subject === '' && $subject_required === 'true' ) {
-        $array['subjectMessage'] = 'error';
-        $block_success = true;
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        throw new Exception('Please enter a valid email address');
     }
 
-    if( $phone === '' && $phone_required === 'true' ) {
-        $array['phoneMessage'] = 'error';
-        $block_success = true;
+    if (empty($recaptchaResponse)) {
+        throw new Exception('Please complete the reCAPTCHA verification');
     }
 
-    if( $address === '' && $address_required === 'true' ) {
-        $array['addressMessage'] = 'error';
-        $block_success = true;
+    $recaptchaSecret = $config->get('RECAPTCHA_SECRET_KEY');
+    $recaptchaVerify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
+    $recaptchaData = json_decode($recaptchaVerify);
+
+    if (!$recaptchaData->success) {
+        throw new Exception('reCAPTCHA verification failed');
     }
 
-    if( $company === '' && $company_required === 'true' ) {
-        $array['companyMessage'] = 'error';
-        $block_success = true;
+    // Initialize mailer and send both emails
+    $mailer = new Mailer();
+    $emailSuccess = $mailer->sendContactEmails(
+        $name,
+        $email,
+        $phoneNo,
+        $message
+    );
+
+    if (!$emailSuccess) {
+        throw new Exception('Failed to send email');
     }
 
-    if( $message === '' ) {
-        $array['messageMessage'] = 'error';
-        $block_success = true;
-    }
+    // Return success response
+    echo json_encode([
+        'success' => true,
+        'message' => 'Thank you for your message. We will get back to you soon!'
+    ]);
 
-    
-    if( $block_success === false && $antiSpamHPC === "" ) {	
-        
-        $message_body = "";
-        
-        $array["succesMessage"] = $successMessage;
-
-        $headers= "MIME-Version: 1.0" . "\r\n";
-        $headers.= "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers= "From: " . $name . " <" . $clientEmail .">\r\n";
-        $headers.= "Reply-To: " . $clientEmail;
-        
-        
-        if( $subject !== '' ) {
-            $message_body .= "Subject: " . $subject . "\r\n";
-        }
-        
-        if( $phone !== '' ) {
-            $message_body .= "Phone: " . $phone . "\r\n";
-        }
-        
-        if( $company !== '' ) {
-            $message_body .= "Company: " . $company . "\r\n";
-        }
-        
-        if( $address !== '' ) {
-            $message_body .= "Address: " . $address . "\r\n";
-        }
-        
-        $message_body .= "\r\n" . $message;
-        
-
-        mail($emailTo, $emailIdentifier, $message_body, $headers);
-
-    }
-
-    echo json_encode($array);
-
+} catch (Exception $e) {
+    // Return error response
+    http_response_code(400);
+    echo json_encode([
+        'success' => false,
+        'message' => $e->getMessage()
+    ]);
 }
-
-?>

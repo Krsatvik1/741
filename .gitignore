@@ -1,0 +1,15 @@
+# Environment variables
+.env
+
+# PHP error logs
+error_log
+php_error.log
+
+# XAMPP generated files
+/xampp/
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project

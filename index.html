@@ -1,62 +1,48 @@
+<!-- Previous content remains unchanged until the contact form submission handler -->
 <!doctype html>
-
 <html lang="en">
-
+<!-- Previous head content remains unchanged -->
 
 <head>
+    <!-- Previous head content remains unchanged -->
+    <!-- Add reCAPTCHA script -->
 
 
     <!-- CHARSET -->
     <meta charset="utf-8">
-
-    <!-- META -->
     <meta name="robots" content="noodp" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
     <meta name="Keywords" content="one, page, template, modern, premium, exclusive">
     <meta name="description" content="Speakers that deliver a brain bending experience.">
-
-
-    <!-- PAGE TITLE -->
     <title>741 AUDIO</title>
-
 
     <!-- FAVICON -->
     <link rel="shortcut icon" href="assets/images/icons/favicon.ico">
 
-
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800|Open+Sans:300,400,600,700,800"
         rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-    <!-- STYLESHEETS CORE -->
+    <!-- STYLESHEETS -->
     <link rel="stylesheet" type="text/css" href="assets/css/plugins.css">
-
-
-    <!-- STYLESHEETS TEMPLATE -->
     <link rel="stylesheet" type="text/css" href="assets/css/layout.css?1">
     <link rel="stylesheet" type="text/css" href="assets/css/hero.css">
     <link rel="stylesheet" type="text/css" href="assets/css/blocks.css">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-
-
-    <!-- STYLESHEET TEMPLATE COLOR -->
     <link rel="stylesheet" type="text/css" href="assets/css/color/amber.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/modal.css">
+
+    <!-- Add reCAPTCHA script -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LfgdngqAAAAAP7jeJYwO3jVLdFDIh-IrlvykGO3"></script>
 
 
-</head>
-
-
-<body>
-
-
-
-    <!-- PAGE LOADER -->
+    <!-- Rest of the body content remains unchanged -->
+    <!-- Previous scripts remain unchanged -->
     <div id="page-loader">
 
 
@@ -82,8 +68,61 @@
 
     </div>
     <!-- /PAGE LOADER -->
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .modal-content {
+            background-color: #ffffff;
+            margin: 15% auto;
+            padding: 100px;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            position: relative;
+            text-align: center;
+            color: black;
+            font-size: 32px !important;
+        }
+
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            color: #0a0a0a;
+            font-size: 32px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+    </style>
 
 
+    <div id="purchaseModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <p style="color:black; line-height: auto !important; font-weight: 300 !important;">Thank you for your purchase! Your order has been confirmed.</p>
+        </div>
+    </div>
+
+    <div id="mailModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <p style="color:black; line-height: auto !important; font-weight: 300 !important;">Thanks for contacting us! We will be contacting you soon!</p>
+        </div>
+    </div>
 
     <!-- MAIN -->
     <div id="main">
@@ -228,9 +267,12 @@
 
 
                         <li> <a class="phantom" href="#hero">Home</a> </li>
-                        <li> <a href="#about">About</a> </li>
-                        <li> <a href="#service">Features</a> </li>
-                        <li> <a href="#team">Pricing</a> </li>
+                        <li> <a href="#about">741</a> </li>
+                        <li> <a href="#features">Features</a> </li>
+                        <li> <a href="#taster">The Taster</a> </li>
+                        <li> <a href="#traditional">741 Traditional</a> </li>
+                        <li> <a href="#gallery">Gallery</a> </li>
+                        <li> <a href="#faqs">FAQs</a> </li>
                         <li> <a href="#news">News</a> </li>
                         <li> <a href="#contact">Contact</a> </li>
 
@@ -379,7 +421,7 @@
                                     class="cbp-caption cbp-lightbox scroll-animated-from-bottom">
                                     <!a class="cbp-lightbox" href="https://vimeo.com/109777877">
 
-                                        <span><svg width="100%" height="auto" viewBox="0 0 64 45" fill="none"
+                                        <span><svg width="100%" viewBox="0 0 64 45" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_731_453)">
                                                     <path
@@ -432,7 +474,7 @@
 
 
         <!-- SERVICE -->
-        <section id="service">
+        <section id="features">
 
 
             <!-- CONTENT -->
@@ -784,14 +826,14 @@
 
 
         <!-- TEAM -->
-        <section id="team">
+        <section id="taster">
             <style>
                 @media screen and (max-width: 425px) {
                     .col-sm-6 {
                         width: 50%;
-                        float:left
+                        float: left
                     }
-                    
+
                 }
             </style>
 
@@ -901,7 +943,7 @@
                                 Price : ₹11,000
                             </div>
 
-                            <a href="#" class="button-default">Buy Now</a>
+                            <a href="https://rzp.io/rzp/741audio" class="button-default">Buy Now</a>
 
                         </div>
                         <!-- /COLUMN -->
@@ -920,7 +962,7 @@
             <!-- /CONTENT -->
 
             <!-- CONTENT -->
-            <div class="content bg-black block-about-1 padding-top-140 padding-bot-130">
+            <div id="traditional" class="content bg-black block-about-1 padding-top-140 padding-bot-130">
 
 
                 <!-- CONTAINER -->
@@ -931,7 +973,7 @@
                     <div class="header text-center scroll-animated-from-bottom"
                         style="padding-bottom: 24px !important;">
 
-                        <h1 style="letter-spacing: -0">The Taster</h1>
+                        <h1 style="letter-spacing: -0">741 Traditional</h1>
 
                     </div>
                     <h3 class="scroll-animated-from-bottom" style="text-align: center;">
@@ -1024,7 +1066,7 @@
             </div>
             <!-- /CONTENT -->
             <!-- CONTENT -->
-            <div class="content bg-white block-about-1 padding-top-140 padding-bot-130">
+            <div id="gallery" class="content bg-white block-about-1 padding-top-140 padding-bot-130">
 
 
                 <!-- CONTAINER -->
@@ -1035,12 +1077,9 @@
                     <div class="header text-center scroll-animated-from-bottom"
                         style="padding-bottom: 24px !important;">
 
-                        <h1 style="letter-spacing: -0">The Taster</h1>
+                        <h1 style="letter-spacing: -0">Gallery</h1>
 
                     </div>
-                    <h3 class="scroll-animated-from-bottom" style="text-align: center;">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    </h3>
                     <!-- /HEADER -->
 
                     <!-- ROW -->
@@ -1193,7 +1232,172 @@
 
             </div>
             <!-- /CONTENT -->
+            <!-- CONTENT -->
+            <div id="faqs" class="content bg-black block-about-1 padding-top-140 padding-bot-130">
 
+
+                <!-- CONTAINER -->
+                <div class="container text-left">
+
+
+                    <!-- HEADER -->
+                    <div class="header text-center scroll-animated-from-bottom"
+                        style="padding-bottom: 24px !important;">
+
+                        <h1 style="letter-spacing: -0">FAQs</h1>
+
+                    </div>
+                    <!-- /HEADER -->
+
+                    <div class="panel-group accordion-1 accordion-default" role="tablist" aria-multiselectable="true">
+                              
+                              
+                        <!-- ITEM-1 -->
+                        <div class="panel accordion-item-default">
+                        
+                        
+                            <!-- HEADING -->
+                            <div class="panel-heading" role="tab">
+                            
+                            
+                                <!-- PANEL TITLE -->
+                                <h4 class="panel-title">
+                                
+                                    <a role="button" data-toggle="collapse" data-parent=".accordion-1" href="#accordion-data-1" aria-expanded="true" aria-controls="collapseOne" class="">ACCORDION #1</a>
+                                  
+                                </h4>
+                                <!-- /PANEL TITLE -->
+                              
+                              
+                            </div>
+                            <!-- /HEADING -->
+                            
+                            
+                            <!-- CONTENT -->
+                            <div id="accordion-data-1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true" style="">
+                            
+                            
+                                <!-- BODY -->
+                                <div class="panel-body">
+                                
+                                    <p>
+                                    Lorem ipsum dolor sit amet, pri quodsi deserunt ea, vide omnes eum ad. Ex denique dissentiunt ullamcorper has. 
+                                    His nemore luptatum facilisi ne, at vis docendi aliquando, sea te eius laoreet eleifend.
+                                    </p>
+                                
+                                </div>
+                                <!-- /BODY -->
+                              
+                              
+                            </div>
+                            <!-- /CONTENT -->
+                          
+                          
+                        </div>
+                        <!-- /ITEM-1 -->
+                        
+                        
+                        <!-- ITEM-2 -->
+                        <div class="panel accordion-item-default">
+                        
+                        
+                            <!-- HEADING -->
+                            <div class="panel-heading" role="tab">
+                            
+                            
+                                <!-- PANEL TITLE -->
+                                <h4 class="panel-title">
+                                
+                                    <a role="button" data-toggle="collapse" data-parent=".accordion-1" href="#accordion-data-2" aria-expanded="false" aria-controls="collapseOne" class="collapsed">ACCORDION #2</a>
+                                  
+                                </h4>
+                                <!-- /PANEL TITLE -->
+                              
+                              
+                            </div>
+                            <!-- /HEADING -->
+                            
+                            
+                            <!-- CONTENT -->
+                            <div id="accordion-data-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false" style="height: 0px;">
+                            
+                            
+                                <!-- BODY -->
+                                <div class="panel-body">
+                                
+                                    <p>
+                                    Lorem ipsum dolor sit amet, pri quodsi deserunt ea, vide omnes eum ad. Ex denique dissentiunt ullamcorper has. 
+                                    His nemore luptatum facilisi ne, at vis docendi aliquando, sea te eius laoreet eleifend.
+                                    </p>
+                                
+                                </div>
+                                <!-- /BODY -->
+                              
+                              
+                            </div>
+                            <!-- /CONTENT -->
+                          
+                          
+                        </div>
+                        <!-- /ITEM-2 -->
+                        
+                        
+                        <!-- ITEM-3 -->
+                        <div class="panel accordion-item-default">
+                        
+                        
+                            <!-- HEADING -->
+                            <div class="panel-heading" role="tab">
+                            
+                            
+                                <!-- PANEL TITLE -->
+                                <h4 class="panel-title">
+                                
+                                    <a role="button" data-toggle="collapse" data-parent=".accordion-1" href="#accordion-data-3" aria-expanded="false" aria-controls="collapseOne" class="collapsed">ACCORDION #3</a>
+                                  
+                                </h4>
+                                <!-- /PANEL TITLE -->
+                              
+                              
+                            </div>
+                            <!-- /HEADING -->
+                            
+                            
+                            <!-- CONTENT -->
+                            <div id="accordion-data-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" aria-expanded="false">
+                            
+                            
+                                <!-- BODY -->
+                                <div class="panel-body">
+                                
+                                    <p>
+                                    Lorem ipsum dolor sit amet, pri quodsi deserunt ea, vide omnes eum ad. Ex denique dissentiunt ullamcorper has. 
+                                    His nemore luptatum facilisi ne, at vis docendi aliquando, sea te eius laoreet eleifend.
+                                    </p>
+                                
+                                </div>
+                                <!-- /BODY -->
+                              
+                              
+                            </div>
+                            <!-- /CONTENT -->
+                          
+                          
+                        </div>
+                        <!-- /ITEM-3 -->
+                      
+                      
+                    </div>
+
+
+
+
+                </div>
+                <!-- /CONTAINER -->
+
+
+            </div>
+            <!-- /CONTENT -->
         </section>
         <!-- /TEAM -->
 
@@ -1374,137 +1578,139 @@
 
         <!-- CONTACT -->
         <section id="contact">
-
-
-            <!-- CONTENT -->
             <div class="content bg-black block-contact-1 padding-top-130 padding-bot-120">
-
-
-                <!-- CONTAINER -->
                 <div class="container">
-
-
-                    <!-- HEADER -->
                     <div class="header text-center scroll-animated-from-bottom">
-
                         <h1>Contact</h1>
-
                     </div>
-                    <!-- /HEADER -->
 
-
-
-                    <!-- TAB CONTENT CONTAINER -->
                     <div class="tab-content">
-
-
-                        <!-- TAB CONTENT ITEM-1 -->
                         <div class="tab-pane fade in active" id="contact-data-1">
-
-
-                            <!-- FORM-->
-                            <form id="contact-form" action="assets/contact.php" method="post" autocomplete="off">
-
-
-                                <!-- FORM GROUP -->
+                            <!-- FORM -->
+                            <form id="contactForm">
                                 <div class="form-group scroll-animated-from-bottom">
-
                                     <input type="text" id="contact-form-name" class="form-control" name="name"
                                         placeholder="* NAME">
-
                                 </div>
-                                <!-- /FORM GROUP -->
 
-
-                                <!-- FORM GROUP -->
                                 <div class="form-group scroll-animated-from-bottom">
-
                                     <input type="text" id="contact-form-email" class="form-control" name="email"
                                         placeholder="* EMAIL">
-
                                 </div>
-                                <!-- /FORM GROUP -->
 
-                                <!-- FORM GROUP -->
                                 <div class="form-group scroll-animated-from-bottom">
-
                                     <input data-require-filling="true" type="text" id="contact-form-phone"
                                         class="form-control" name="phone" placeholder="* PHONE">
-
                                 </div>
-                                <!-- /FORM GROUP -->
 
-
-                                <!-- FORM GROUP -->
-                                <!-- <div class="form-group scroll-animated-from-bottom">
-                                  
-                                      <input data-require-filling="false" type="text" id="contact-form-company" class="form-control" name="company" placeholder="COMPANY">
-                                  
-                                  </div> -->
-                                <!-- /FORM GROUP -->
-
-
-                                <!-- FORM GROUP -->
-                                <!-- <div class="form-group scroll-animated-from-bottom">
-                                  
-                                      <input data-require-filling="false" type="text" id="contact-form-address" class="form-control" name="address" placeholder="ADDRESS">
-                                  
-                                  </div> -->
-                                <!-- /FORM GROUP -->
-
-
-                                <!-- FORM GROUP -->
-                                <!-- <div class="form-group scroll-animated-from-bottom">
-                                  
-                                      <input data-require-filling="false" type="text" id="contact-form-phone" class="form-control" name="phone" placeholder="PHONE">
-                                  
-                                  </div> -->
-                                <!-- /FORM GROUP -->
-
-
-                                <!-- FORM GROUP ( HONEYPOT CAPTCHA - FOR SPAM PROTECTION - DO NOT REMOVE THIS FIELD ) -->
-                                <div class="form-group scroll-animated-from-bottom hpc">
-
+                                <!-- Honeypot field -->
+                                <div class="form-group scroll-animated-from-bottom hpc" style="display:none;">
                                     <input type="text" id="contact-form-country" class="form-control" name="country"
                                         placeholder="* COUNTRY">
-
                                 </div>
-                                <!-- /FORM GROUP ( HONEYPOT CAPTCHA - FOR SPAM PROTECTION - DO NOT REMOVE THIS FIELD ) -->
-
-
-                                <!-- FORM GROUP -->
-                                <!-- <div class="form-group scroll-animated-from-bottom">
-                                  
-                                      <input data-require-filling="true" type="text" id="contact-form-subject" class="form-control" name="subject" placeholder="* SUBJECT">
-                                  
-                                  </div> -->
-                                <!-- /FORM GROUP -->
-
-
-                                <!-- FORM GROUP -->
+                                <input type="hidden" id="token-input" name="token">
                                 <div class="form-group button-container scroll-animated-from-bottom">
-
-
                                     <input type="text" id="contact-form-message" class="form-control" name="message"
                                         placeholder="* MESSAGE">
-
-                                    <!-- BUTTON WRAPPER -->
                                     <div class="button-wrapper">
-
-                                        <button type="submit"><span class="ti-arrow-right"></span></button>
-
+                                        <button type="submit" id="submit-btn">
+                                            <span class="ti-arrow-right"></span>
+                                        </button>
                                     </div>
-                                    <!-- /BUTTON WRAPPER -->
-
-
                                 </div>
-                                <!-- /FORM GROUP -->
-
 
                             </form>
-                            <!-- /FORM-->
+                            <script>
+                                // Define the submit function
+                                function submitForm(e) {
+                                    // Prevent default form submission
+                                    e.preventDefault();
 
+                                    grecaptcha.ready(function () {
+                                        grecaptcha.execute('6LfgdngqAAAAAP7jeJYwO3jVLdFDIh-IrlvykGO3', {action: 'submit'})
+                                            .then(function (token) {
+                                                // Add token to form
+                                                document.getElementById('token-input').value = token;
 
+                                                // Get form data
+                                                const formData = new FormData(document.getElementById('contactForm'));
+
+                                                // Submit form
+                                                fetch('assets/contact.php', {
+                                                    method: 'POST',
+                                                    body: formData
+                                                })
+                                                    .then(response => response.json())
+                                                    .then(data => {
+                                                        if (data.success) {
+                                                            // Show success message
+                                                            // Reset form
+                                                            document.getElementById('contactForm').reset();
+                                                            // Redirect to homepage
+                                                            window.location.href = '/?mail=true';
+                                                        } else {
+                                                            // Show error message
+                                                        }
+                                                    })
+                                                    .catch(error => {
+                                                        alert('An error occurred. Please try again later.');
+                                                    });
+                                            });
+                                    });
+                                }
+
+                                // Make sure form exists before adding event listener
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    const form = document.getElementById('contactForm');
+                                    if (form) {
+                                        form.addEventListener('submit', submitForm);
+                                    }
+                                });
+                                document.addEventListener('DOMContentLoaded', function () {
+                                    // Get modals
+                                    const purchaseModal = document.getElementById('purchaseModal');
+                                    const mailModal = document.getElementById('mailModal');
+
+                                    // Get close buttons
+                                    const closeButtons = document.getElementsByClassName('close');
+
+                                    // Close modal when clicking close button
+                                    for (let closeBtn of closeButtons) {
+                                        closeBtn.onclick = function () {
+                                            purchaseModal.style.display = "none";
+                                            mailModal.style.display = "none";
+                                            // Remove query parameter without refreshing page
+                                            const url = new URL(window.location);
+                                            url.searchParams.delete('purchase');
+                                            url.searchParams.delete('mail');
+                                            window.history.pushState({}, '', url);
+                                        }
+                                    }
+
+                                    // Close modal when clicking outside
+                                    window.onclick = function (event) {
+                                        if (event.target == purchaseModal || event.target == mailModal) {
+                                            purchaseModal.style.display = "none";
+                                            mailModal.style.display = "none";
+                                            // Remove query parameter without refreshing page
+                                            const url = new URL(window.location);
+                                            url.searchParams.delete('purchase');
+                                            url.searchParams.delete('mail');
+                                            window.history.pushState({}, '', url);
+                                        }
+                                    }
+
+                                    // Check URL parameters
+                                    const urlParams = new URLSearchParams(window.location.search);
+                                    if (urlParams.get('purchase') === 'true') {
+                                        purchaseModal.style.display = "block";
+                                    }
+                                    if (urlParams.get('mail') === 'true') {
+                                        mailModal.style.display = "block";
+                                    }
+                                });
+                            </script>
+                            <!-- /FORM -->
                         </div>
                         <!-- /TAB CONTENT ITEM-1 -->
 
@@ -1601,120 +1807,24 @@
                     </div>
                     <!-- /TAB CONTENT CONTAINER -->
 
-
                 </div>
                 <!-- /CONTAINER -->
 
-
             </div>
             <!-- /CONTENT -->
-
 
         </section>
         <!-- /CONTACT -->
 
+        <!-- Previous content remains unchanged -->
 
-
-        <!-- FOOTER -->
-        <footer>
-
-
-            <!-- CONTENT -->
-            <div class="content bg-black bg-parallax block-footer-1 padding-top-110 padding-bot-150">
-
-
-                <!-- CONTAINER -->
-                <div class="container">
-
-
-                    <!-- ROW -->
-                    <div class="row">
-
-
-                        <!-- COLUMN -->
-                        <div class="col-lg-12 text-center">
-
-                            <img class="img-responsive scroll-animated-from-bottom"
-                                src="assets/images/logo-white-footer.png" alt="logo">
-                            <h5 class="scroll-animated-from-bottom">© 2023-2024. All Rights Reserved.</h5>
-
-                        </div>
-                        <!-- /COLUMN -->
-
-
-                    </div>
-                    <!-- /ROW -->
-
-
-                </div>
-                <!-- /CONTAINER -->
-
-
-                <!-- BUTTON SCROLL TOP CONTAINER -->
-                <div class="scroll-top">
-
-
-                    <!-- BUTTON SCROLL TOP INNER -->
-                    <div class="scroll-top-inner scroll-animated-from-bottom">
-
-                        <span class="ti-arrow-up"></span>
-
-                    </div>
-                    <!-- /BUTTON SCROLL TOP INNER -->
-
-
-                </div>
-                <!-- /BUTTON SCROLL TOP CONTAINER -->
-
-
-                <!-- PARALLAX BACKGROUND -->
-                <div class="dzsparallaxer auto-init do-not-set-js-height"
-                    data-options="{  mode_scroll: 'normal', animation_duration: '0' , direction: 'reverse' }">
-
-                    <div class="divimage dzsparallaxer--target"
-                        style="background-image: url(assets/images/parallax/4.jpg)"></div>
-                    <div class="bg-overlay-section"></div>
-
-                </div>
-                <!-- /PARALLAX BACKGROUND -->
-
-
-            </div>
-            <!-- /CONTENT -->
-
-
-        </footer>
-        <!-- /FOOTER -->
-
-
-
-        <!-- PHANTOM WRAPPER FOR POPUPS ( REQUIRED FOR POPUPS )-->
-        <div class="phantom-wrapper-popups"></div>
-
-
-
-    </div>
-    <!-- /MAIN-->
-
-
-
-    <!-- JAVASCRIPTS CORE-->
-    <script type="text/javascript" src="assets/js/plugins/plugins.js"></script>
-
-
-    <!-- JAVASCRIPTS TEMPLATE CONFIG -->
-    <script type="text/javascript" src="config.js"></script>
-
-
-    <!-- JAVASCRIPTS TEMPLATE -->
-    <script type="text/javascript" src="assets/js/scripts.js"></script>
-    <script type="text/javascript" src="assets/js/hero.js"></script>
-    <script type="text/javascript" src="assets/js/blocks.js"></script>
-    <script type="text/javascript" src="assets/js/custom.js"></script>
-
-
-
-</body>
-
+        <!-- JAVASCRIPTS -->
+        <script type="text/javascript" src="assets/js/plugins/plugins.js"></script>
+        <script type="text/javascript" src="config.js"></script>
+        <script type="text/javascript" src="assets/js/scripts.js"></script>
+        <script type="text/javascript" src="assets/js/hero.js"></script>
+        <script type="text/javascript" src="assets/js/blocks.js"></script>
+        <script type="text/javascript" src="assets/js/custom.js"></script>
+        </body>
 
 </html>
